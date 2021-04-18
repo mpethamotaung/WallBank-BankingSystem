@@ -33,6 +33,20 @@ public class Account {
         return this.uuid;
     }
 
+    // Summary get method
+    public String getSummaryLine() {
+
+        // get account balance
+        double balance = this.getBalance();
+
+        // format summary line
+        if (balance >= 0) {
+            return String.format("%s : $%.02f : %s", this.uuid, balance, this.name);
+        } else {
+            return String.format("%s : $(%.02f) : %s", this.uuid, balance, this.name);
+        }
+    }
+
     // add amount to the account
     public void deposit(double amount) {
 
@@ -46,9 +60,37 @@ public class Account {
 
     // return account balance
     public double getBalance() {
+
+        // initialize balance
+        double balance = 0;
+
+        // for statement for transaction instance
+        for (Transaction t : this.transaction) {
+            balance += t.getAmount();
+        }
+
+        // return value
         return balance;
     }
 
     // print transaction history
+    public void printTransHistory() {
+
+        System.out.printf("\n Transcation History for accounts %s\n", this.uuid);
+        for (int t = this.transaction.size() - 1; t >= 0; t--) {
+            System.out.printf(this.transaction.get(t).getSummaryLine());
+
+        }
+        System.out.println();
+
+    }
+
+    // add transaction to history
+    public void addTransaction(double amount, String memo) {
+
+        // new transaction object with Transaction class(call)
+        Transaction newTrans = new Transaction(amount, memo, this);
+        this.transaction.add(newTrans);
+    }
 
 }
