@@ -56,35 +56,35 @@ public class Bank {
     }
 
     // generate unique IDs for each account
-    public String getNewAccountUUID(){
+    public String getNewAccountUUID() {
 
-        //declare & initialize instance variables
+        // declare & initialize instance variables
         String uuid;
         Random rng = new Random();
-        int len = 10
+        int len = 10;
         boolean nonUnique;
 
-        //loop until unique id is found
-        do{
-			//generate the number
-			uuid = "";
-			for (int c = 0; c<len; c++){
-				
-				uuid+= ((Integer)rng.nextInt(10)).toString();
-			}
-			//check to makesure if unique
-			nonUnique = false;
-			for (Account a : this.accounts){
+        // loop until unique id is found
+        do {
+            // generate the number
+            uuid = "";
+            for (int c = 0; c < len; c++) {
 
-				if(uuid.compareTo(a.getUUID())== 0){
-					nonUnique = true;
-					break;
-				}
-			}
-			
-		}while(nonUnique);
-		
-		return uuid;
+                uuid += ((Integer) rng.nextInt(10)).toString();
+            }
+            // check to make sure if unique
+            nonUnique = false;
+            for (Account a : this.accounts) {
+
+                if (uuid.compareTo(a.getUUID()) == 0) {
+                    nonUnique = true;
+                    break;
+                }
+            }
+
+        } while (nonUnique);
+
+        return uuid;
     }
 
     // add account
