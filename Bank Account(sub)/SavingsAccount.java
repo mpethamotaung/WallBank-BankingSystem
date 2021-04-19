@@ -1,15 +1,15 @@
 /*
-Account class
+Savings Account class
 */
 
 //create account class
-public class Account {
+public class SavingsAccount {
 
     // initialize instance variables to store values
     private double balance;
 
     // account class constructor
-    public Account(double initialBalance) {
+    public SavingsAccount(double initialBalance) {
 
         if (initialBalance > 0.0) {
 
