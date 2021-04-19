@@ -11,7 +11,7 @@ public class SavingsAccount {
     // account class constructor
     public SavingsAccount(double initialBalance) {
 
-        if (initialBalance > 0.0) {
+        if (initialBalance > 1000) {
 
             balance = initialBalance;
         }
