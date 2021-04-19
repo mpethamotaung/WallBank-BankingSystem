@@ -16,4 +16,26 @@ public class Account {
             balance = initialBalance;
         }
     }
+
+    // add funds to account(method add)
+    public void deposit(double amount) {
+
+        // new balance = balance + amount
+        balance += amount;
+    }
+
+    // subtract funds from account(method subtract)
+    public void withdraw(double amount) {
+
+        // new balance = balance - amount
+        balance += amount;
+    }
+
+    // balance inquiry (method get)
+    public double getBalance() {
+
+        // give the value of balance to calling method
+        return balance;
+    }
+
 }
