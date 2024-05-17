@@ -3,10 +3,10 @@
 This Java program simulates a basic banking system with functionalities such as account management, transactions, and balance inquiries.
 
 ##Features:
- * Account Creation: Users can open new accounts with the bank.
- * Deposit and Withdrawal: Users can deposit money into and withdraw money from their accounts.
- * Transfer: Users can transfer funds between accounts.
- * Balance Inquiry: Users can check their account balances.
+- * Account Creation: Users can open new accounts with the bank.
+- * Deposit and Withdrawal: Users can deposit money into and withdraw money from their accounts.
+- * Transfer: Users can transfer funds between accounts.
+- * Balance Inquiry: Users can check their account balances.
    
 ##Technologies Used:
  * Java: The core programming language used for developing the banking system.
